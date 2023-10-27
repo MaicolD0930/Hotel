@@ -1,0 +1,60 @@
+
+/* Carrito */
+.Slider{
+    width: 1280px;
+    height: 500px;
+    margin: 50px auto 0;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+/* Carrito */
+.Slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+/* Carrito */
+.Slider li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+/* Carrito */
+.TextSlide{
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 30px;
+    width: 100%;
+    color: rgb(3, 3, 3);
+}
+/* Carrito */
+.TextSlide h2{
+    text-align: center;
+    padding-left: 240px;
+    padding-right: 20%;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+/* Carrito */
+.Slider img{
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+}
+
+/* Animacion del Carrito */
+@keyframes slide {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
