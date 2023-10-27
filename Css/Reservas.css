@@ -10,7 +10,7 @@ body {
 .Form{
     background:rgb(190, 188, 188);
     color: black;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 .FormEdad{
     text-align: center;
