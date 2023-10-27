@@ -1,10 +1,19 @@
-
+.CSlider{
+    margin-left: 4%;
+    width: 1180px;
+    height: 520px;
+    background:rgb(58, 50, 58);
+    border-radius: 5px;
+}
 /* Carrito */
 .Slider{
-    width: 1280px;
+    position: absolute;
+    width: 1180px;
     height: 500px;
+    margin-top: 0px;
     margin: 50px auto 0;
     margin-bottom: 50px;
+    top: 214px;
     overflow: hidden;
 }
 /* Carrito */
@@ -16,9 +25,13 @@
 }
 /* Carrito */
 .Slider li{
+    margin-top: 20px;
     width: 100%;
     list-style: none;
     position: relative;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 /* Carrito */
 .TextSlide{
@@ -38,8 +51,6 @@
 }
 /* Carrito */
 .Slider img{
-    padding-left: 100px;
-    padding-right: 100px;
     width: 100%;
 }
 

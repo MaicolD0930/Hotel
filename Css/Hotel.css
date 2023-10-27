@@ -64,8 +64,11 @@ article h2{
 }
 
 .main{
-  background:rgb(128, 128, 143);
   color: black;
+}
+.main2{
+  color: black;
+  background:rgb(128, 128, 143);
 }
 aside{
   text-align: center;
@@ -81,6 +84,18 @@ aside{
   margin-top: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+}
+.containerHome{
+  margin: 0 20px;
+  margin-top: 50px;
+  margin-left: 68px;
+  margin-right: 92px;
+}
+.containerHome article{
+  background:rgb(58, 50, 58);
+  border-radius: 20px;
+  margin: 0 20px;
+  width: 353px;
 }
 
 .TODOFORM{
@@ -115,6 +130,7 @@ h2{
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    padding-left: 50px;
   }
   
 .he {

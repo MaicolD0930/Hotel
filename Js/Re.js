@@ -51,7 +51,7 @@ function Reserva(){
         else if(!TIPO_TEXTO.test(Nom.value))
         alert("!! El Campo Nombre solo puede Contrener Letras !!");
         else{
-            if(!Ano){
+            if(!Ano){   
             alert("!! Ingrese la fecha de nacimiento !!")
             }
             else{
@@ -91,6 +91,7 @@ function Reserva(){
                                     } else if (Opc === "HB3") {
                                         Total= 100000;
                                     }
+
 
                                     if(isNaN(Cd))
                                         alert("No se puede calcular el valor a pagar, MINIMO debe ingresar la cantidad de noches");
