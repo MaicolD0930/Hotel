@@ -11,7 +11,7 @@ function HideForm(){
 
 
 function Reserva(){
-    var Cd = parseInt(document.getElementById("10").value);
+    var Cd = document.getElementById("10");
     var V1 = document.getElementById("13");
     var S1 = document.getElementById("11");
     var S2 = document.getElementById("12");
@@ -31,6 +31,15 @@ function Reserva(){
     const Fch = document.getElementById('3').value;
     const Fech = new Date(Fch);
     const Ano = Fech.getFullYear();
+
+        //  8 Fecha Entrada
+    const   FechaEntrada = document.getElementById("8").value;
+    const   F_E = new Date(FechaEntrada);
+
+        //  9 Fecha Salida
+    const   FechaSalida  = document.getElementById("9").value;
+    const   F_S = new Date(FechaSalida);
+
 
         //  5 Correo Electronico
     var Eml = document.getElementById('5');
@@ -92,45 +101,53 @@ function Reserva(){
                                         Total= 100000;
                                     }
 
-
-                                    if(isNaN(Cd))
-                                        alert("No se puede calcular el valor a pagar, MINIMO debe ingresar la cantidad de noches");
-                                        else{
-                                            Btn.addEventListener("click", function() {
-                                                if (S1.checked && S2.checked) {
-                                                    Total=Total*Cd + 200000 ;
-                                                    Mensaje.innerHTML = "Total: " + Total;
-                                                    Total =Total + Total*0.19;
-                                                    MTotal.innerHTML = Total;
-                                                }
-                                                else if(S1.checked ){
-                                                    Total=Total*Cd + 150000;
-                                                    Mensaje.innerHTML = "Total: " + Total;
-                                                    Total =Total + Total*0.19;
-                                                    MTotal.innerHTML = Total;
-                                                }
-                                                else if (S2.checked){
-                                                    Total=Total*Cd + 50000;
-                                                    Mensaje.innerHTML = "Total: " + Total;
-                                                    Total =Total + Total*0.19;
-                                                    MTotal.innerHTML = Total;
-                                                }
-                                                else{
-                                                    Total=Total*Cd;
-                                                    Mensaje.innerHTML = "Total: " + Total;
-                                                    Total =Total + Total*0.19;
-                                                    MTotal.innerHTML = Total;
-                                                }
-                                            });
+                                    if(F_E <= F_S ){
+                                        if(F_E - F_S != 0){
+                                            var CDias = F_S - F_E;
+                                            var TiempoDia = 1000*60*60*24;
+                                            var TDias = CDias / TiempoDia;
+                                            Cd.textContent="Dias a Hospedarse: "+ TDias;
+                                        }else{ 
+                                            alert("Usted debe de hospedarse minimo 1 dia")
                                         }
-                                }   
-                            }
+                                    }else{
+                                        alert("!! La Fecha de Entrada y Salida son erroneas !!");
+                                    }
+                                        Btn.addEventListener("click", function() {
+                                            if (S1.checked && S2.checked) {
+                                                Total=Total*TDias + 200000 ;
+                                                Mensaje.innerHTML = "Total: " + Total;
+                                                Total =Total + Total*0.19;
+                                                MTotal.innerHTML = Total;
+                                            }
+                                            else if(S1.checked ){
+                                                Total=Total*TDias + 150000;
+                                                Mensaje.innerHTML = "Total: " + Total;
+                                                Total =Total + Total*0.19;
+                                                MTotal.innerHTML = Total;
+                                            }
+                                            else if (S2.checked){
+                                                Total=Total*TDias + 50000;
+                                                Mensaje.innerHTML = "Total: " + Total;
+                                                Total =Total + Total*0.19;
+                                                MTotal.innerHTML = Total;
+                                            }
+                                            else{
+                                                Total=Total*TDias;
+                                                Mensaje.innerHTML = "Total: " + Total;
+                                                Total =Total + Total*0.19;
+                                                MTotal.innerHTML = Total;
+                                            }
+                                        });
+                                }
+                            }   
                         }
                     }
-            }
+                }
         }
     }
 }
+
 
          //Variables de las habitaciones
 var select = document.getElementById("13");
