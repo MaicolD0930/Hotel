@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/Reservas.css">
+    <title>Reserva</title>
+</head>
+
+    <body>
+        <div class="TODOFORM" id="TFORM">
+            <div class="container" id="Ejj1">
+                <section class="Form row">
+                    <article class="col-md-12" id="ejerci1">
+                        <h3 class="Titulo">Formulario de Reserva</h3>
+                        <img class="Logo" src="images/oasis,nof.png"">
+
+                        <p></p>
+                        <div class="Titulos">
+                            <p class="Fc">Ingrese su identificación *</p>
+                            <input class="formularioIp" type="text" id="1" placeholder="Ingrese su identificación">
+                            
+                        </div>
+                        <div class="Titulos">
+                            <p class="Fc">Ingrese su nombre *</p>
+                            <input class="formularioIp" type="text" id="2" placeholder="Ingrese su nombre">
+                        </div>
+
+                        <br><br>
+
+                        <div class="FormEdad">
+                            <p class="Fc">Fecha de Nacimiento *</p>
+                            <p class="Fc">Edad :</p>
+                            <input class="formularioIp" type="date" id="3" placeholder="Fecha de Nacimiento">
+                            
+                            <p class="formularioIp" id="eda"></p>
+                        </div>
+
+                        <br><br>
+                        
+                        <div class="Titulos">
+                            <p class="Fc">Correo electrónico *</p>
+                            <input class="formularioIp" type="email" id="5" placeholder="Correo electrónico">
+                        </div>
+                        <div class="Titulos">
+                            <p class="Fc">Número celular*</p>
+                            <input class="formularioIp" type="tel" id="6" placeholder="Número celular">
+                        </div>
+
+                        <br><br>
+
+                        <div class="image">
+                            <p class="Fc">Tipo de habitación *</p>
+                            <select name="Hb" id="13" class="formularioIp" id="7">
+                                <option value="defecto">Seleccione alguna Habitación</option>
+                                <option value="HBT">Ver todas las habitaciones</option>
+                                <option value="HB1">Habitación Vip</option>
+                                <option value="HB2">Habitación Estandar</option>
+                                <option value="HB3">Habitación Humilde</option>
+                            </select>
+                        </div>
+                        <br><br>
+                        <div class="Titulos" id="img1">
+                            <p>Habitación Vip</p>
+                            <img class="imageges" src="images/Hotel1.jpeg">
+                            <p>$ 500.000 x Noche $</p>
+                        </div>
+                        <br><br>
+                        <div class="Titulos" id="img2">
+                            <p>Habitación Estandar</p>
+                            <img class="imageges" src="images/Hotel3.jpeg">
+                            <p>$ 300.000 x Noche $</p>
+                        </div>
+                        <div class="Titulos" id="img3">
+                            <p>Habitación Humilde</p>
+                            <img class="imageges" src="images/Rancho.jpg">
+                            <p>$ 100.000 x Noche $</p>
+                        </div>
+
+                        <br><br>
+
+                        <div class="Titulos">
+                            <p class="Fc">Fecha ingreso *</p>
+                            <input class="formularioIp" type="date" id="8" placeholder="Fecha ingreso">
+                        </div>
+                        <div class="Titulos">
+                            <p class="Fc">Fecha salida *</p>
+                            <input class="formularioIp" type="date" id="9" placeholder="Fecha salida">
+                        </div>
+
+                        <br><br>
+
+                        <div class="Titulos">
+                            <p class="Fc">Cantidad de noches</p>
+                            <input class="formularioIp" type="number" id="10" placeholder="Cantidad de noches">
+                        </div>
+
+                        <br><br>
+
+                        <div class="ck">
+                                <p>Servicio adicional 1</p>
+                                <p>$ 150.000 $</p>
+                        </div>
+                        <div class="ck">
+                            <input class="CK" id="11" type="checkbox">
+                        </div>
+
+                        
+                        <div class="ck">
+                            <p>Servicio adicional 2</p>
+                            <p>$ 50.000 $</p>
+                    </div>
+                    <div class="ck">
+                        <input class="CK" id="12" type="checkbox">
+                    </div>
+
+                    <br><br>
+
+                    <div class="ck">
+                        <h4>SubTotal: </h4>
+                        <div id="SUB"></div>
+                    </div>
+                    <div class="ck">
+                        <h4>Iva: 19% </h4>
+                    </div>
+
+                        <br><br>
+                        <button class="BtnNormal" onclick="Reserva()" id="Btnn">Calcular Valor a pagar</button>
+                        <button class="BtnNormal" onclick="window.location.href='index.html'" class="BtnNormal"  id="Btnn">Volver</button>
+                        <br><br>
+
+                    <label>El total a pagar es: </label>
+                    <div id="TOTAL"></div>
+                    <br><br>
+                    </div>
+
+                    </article>
+        
+
+                </section>
+            </div>
+        </div>
+
+
+        <script src="js/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="Js/Re.js"></script>
+    </body>
+</html>

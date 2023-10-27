@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>One Piece's Hotel</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="Css/Hotel.css">
+        <link rel="stylesheet" href="Css/Reservas.css">
+        <link rel="icon" href="Icon/luff.ico"> 
+    </head>
+<body>
+    <header>
+        <h1 class="titu2">One Piece's Hotel</h1>
+        <ul class="hea">
+            <li class="he">
+                <a href="index.html">Inicio</a>
+            </li>
+            <li class="he">
+                <a href="Habitaciones.html">Habitaciones</a>
+            </li>
+            <img class="LogoI" src="images/OneFinal.png">
+        </ul>
+    </header>
+    <main>
+        <h1>Habitaciones</h1>
+
+                    <!-- Formulario -->
+                    <div class="TODOFORM" id="TFORM">
+                        <div class="container Cont" id="Ejj1">
+                            <section class="Form row">
+                                <article class="col-md-12" id="ejerci1">
+                                    <button onclick="HideForm()" class="BtnSalir">X</button>
+                                    <h3 class="Titulo">Formulario de Reserva</h3>
+                                    <img class="Logo" src="images/OneFinal.png">
+            
+                                    <p></p>
+                                    <div class="Titulos">
+                                        <p class="Fc">Ingrese su identificación *</p>
+                                        <input class="formularioIp" type="text" id="1" placeholder="Ingrese su identificación">
+                                        
+                                    </div>
+                                    <div class="Titulos">
+                                        <p class="Fc">Ingrese su nombre *</p>
+                                        <input class="formularioIp" type="text" id="2" placeholder="Ingrese su nombre">
+                                    </div>
+            
+                                    <br><br>
+            
+                                    <div class="FormEdad">
+                                        <p class="Fc">Fecha de Nacimiento *</p>
+                                        <p class="Fc">Edad :</p>
+                                        <input class="formularioIp" type="date" id="3" placeholder="Fecha de Nacimiento">
+                                        
+                                        <p class="formularioIp" id="eda"></p>
+                                    </div>
+            
+                                    <br><br>
+                                    
+                                    <div class="Titulos">
+                                        <p class="Fc">Correo electrónico *</p>
+                                        <input class="formularioIp" type="email" id="5" placeholder="Correo electrónico">
+                                    </div>
+                                    <div class="Titulos">
+                                        <p class="Fc">Número celular*</p>
+                                        <input class="formularioIp" type="tel" id="6" placeholder="Número celular">
+                                    </div>
+            
+                                    <br><br>
+            
+                                    <div class="image">
+                                        <p class="Fc">Tipo de habitación *</p>
+                                        <select name="Hb" id="13" class="formularioIp" id="7">
+                                            <option value="defecto">Seleccione alguna Habitación</option>
+                                            <option value="HBT">Ver todas las habitaciones</option>
+                                            <option value="HB1">Habitación Vip</option>
+                                            <option value="HB2">Habitación Estandar</option>
+                                            <option value="HB3">Habitación para Parejas</option>
+                                            <option value="HB4">Habitación Humilde</option>
+                                        </select>
+                                    </div>
+                                    <br><br>
+                                    <div class="Titulos2" id="img1">
+                                        <p>Habitación Vip</p>
+                                        <img class="imageges" src="images/Hotel3.jpeg">
+                                        <p>$ 500.000 x Noche $</p>
+                                    </div>
+                                    <div class="Titulos2" id="img2">
+                                        <p>Habitación Estandar</p>
+                                        <img class="imageges" src="images/Hotel2.jpeg">
+                                        <p>$ 300.000 x Noche $</p>
+                                    </div>
+                                    <br><br>
+                                    <div class="Titulos2" id="img3">
+                                        <p>Habitación para Parejas</p>
+                                        <img class="imageges" src="images/Par.jpg">
+                                        <p>$ 200.000 x Noche $</p>
+                                    </div>
+                                    <div class="Titulos2" id="img4">
+                                        <p>Habitación Humilde</p>
+                                        <img class="imageges" src="images/Rancho.jpg">
+                                        <p>$ 100.000 x Noche $</p>
+                                    </div>
+                                    <br><br>
+            
+                                    <div class="Titulos">
+                                        <p class="Fc">Fecha ingreso *</p>
+                                        <input class="formularioIp" type="date" id="8" placeholder="Fecha ingreso">
+                                    </div>
+                                    <div class="Titulos">
+                                        <p class="Fc">Fecha salida *</p>
+                                        <input class="formularioIp" type="date" id="9" placeholder="Fecha salida">
+                                    </div>
+            
+                                    <br><br>
+            
+                                    <div class="Titulos">
+                                        <p class="Fc">Cantidad de noches</p>
+                                        <input class="formularioIp" type="number" id="10" placeholder="Cantidad de noches">
+                                    </div>
+            
+                                    <br><br>
+            
+                                    <div class="ck">
+                                            <p>Servicio adicional 1</p>
+                                            <p>$ 150.000 $</p>
+                                    </div>
+                                    <div class="ck">
+                                        <input class="CK" id="11" type="checkbox">
+                                    </div>
+            
+                                    
+                                    <div class="ck">
+                                        <p>Servicio adicional 2</p>
+                                        <p>$ 50.000 $</p>
+                                </div>
+                                <div class="ck">
+                                    <input class="CK" id="12" type="checkbox">
+                                </div>
+            
+                                <br><br>
+            
+                                <div class="ck">
+                                    <h4>SubTotal: </h4>
+                                    <div id="SUB"></div>
+                                </div>
+                                <div class="ck">
+                                    <h4>Iva: 19% </h4>
+                                </div>
+            
+                                    <br><br>
+                                    <button class="BtnNormal" onclick="Reserva()" id="Btnn">Calcular Valor a pagar</button>
+                                    <button class="BtnNormal" onclick="HideForm()" class="BtnNormal"  id="Btnn">Volver</button>
+                                    <br><br>
+            
+                                <label>El total a pagar es: </label>
+                                <div id="TOTAL"></div>
+                                <br><br>
+                                </div>
+            
+                                </article>
+                    
+            
+                            </section>
+                        </div>
+
+
+                        
+
+            <div class="container">
+                <section class="main row">
+                    <article class="col-md-8">
+                        <h2>Habitacion Vip: </h2>
+                        <p>Habitacion con vista al mar, cuenta con piscina, televisor y nevera. Pasa un momento único a solas</p>
+                        <br>
+                        <h4>Precio noche: $500.000</h4>
+                        <button class="BtnNormalh" onclick="ShowForm()" id="MostrarF">Realizar reserva</button>
+                    </article>
+                    <aside class="col-md-4">
+                        <img class="imgf" src="images/Hotel1.jpeg">
+                    </aside>
+                </section>
+            </div>
+
+            <br><br>
+
+            <div class="container">
+                <section class="main row">
+                    <article class="col-md-8">
+                        <h2>Habitacion Estandar: </h2>
+                        <p>Pasa un momento inolvidable, disfruta este espacio lleno de magia y recorre este camino contigo mismo</p>
+                        <br>
+                        <h4>Precio noche: $300.000</h4>
+                        <button class="BtnNormalh" onclick="ShowForm()" id="MostrarF">Realizar reserva</button>
+                    </article>
+                    <aside class="col-md-4">
+                        <img class="imgf" src="images/Hotel3.jpeg">
+                    </aside>
+                </section>
+            </div>
+
+            <br><br>
+
+            <div class="container">
+                <section class="main row">
+                    <article class="col-md-8">
+                        <h2>Habitacion Para Parejas: </h2>
+                        <p>Ven y disfruta de unas buenas habitaciones acompañado</p>
+                        <br>
+                        <h4>Precio noche: $200.000</h4>
+                        <button class="BtnNormalh" onclick="ShowForm()" id="MostrarF">Realizar reserva</button>
+                    </article>
+                    <aside class="col-md-4">
+                        <img class="imgf" src="images/Par.jpg">
+                    </aside>
+                </section>
+            </div>
+
+        </main>
+
+        <br><br>
+
+        <div class="container">
+            <section class="main row">
+                <article class="col-md-8">
+                    <h2>Habitacion Humilde: </h4>
+                    <p>Que mejor lugar para disfrutar de una vacaciones, que uno el cual te haga sentir como en tu hogar!</p>
+                    <br>
+                    <h4>Precio noche: $100.000</h4>
+                    <button class="BtnNormalh" onclick="ShowForm()" id="MostrarF">Realizar reserva</button>
+                </article>
+                <aside class="col-md-4">
+                    <img class="imgf" src="images/Rancho.jpg">
+                </aside>
+            </section>
+        </div>
+
+
+        <footer>
+            <section>
+                <article class="InfoFooter col-md-4">
+                    <div>
+                        <h3>Nuestras redes sociales:</h3>
+                        <a href="">
+                            <p>Facebook/OnePieceHotel</p>
+                        </a>
+                        <a  href="">
+                            <p>Instagram/OnePieceHotel</p>
+                        </a>
+                        <a href="">
+                            <p>Twiter/OnePieceHotel</p>
+                        </a>
+                        <h3>Contactanos:</h3>
+                        <p>OnePieceHotel@gmail.com</p>
+                        <br><br>
+                        <p style="margin-left: -15px;">&copy; 2023 One Piece's Hotel</p>
+                    </div>
+                </article>
+                <article class="InfoFooter col-md-4">
+                    <div>
+                        <h3>Telefono de Contacto:</h3>
+                        <p>442-02-45  ó  542-02-87</p>
+                        <h3>Nos Ubicamos:</h3>
+                        <p>Japon, Okinawa.</p>
+                        <h3>Nuestra Dirección:</h3>
+                        <p>Carrera 67, # 42, B 68</p>
+                    </div>
+                </article>
+                <aside class="InfoFooter col-md-4">
+                    <div class="Mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13366.063680795336!2d139.82286118746117!3d33.121808119477414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1698363531528!5m2!1ses!2sco" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </aside>
+            </section>
+        </footer>   
+    
+        <script src="js/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="Js/Re.js"></script>
+    </body>
+</html>
