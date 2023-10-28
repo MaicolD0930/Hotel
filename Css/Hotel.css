@@ -85,7 +85,7 @@ aside{
   color: black;
   height: 100%;
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 228px;
 }
 
 .container2{
@@ -213,11 +213,12 @@ footer{
   margin-top: 30px;
 }
 .BtnNormalh:active {
-  background-color: blue;
+  background-color: rgb(85, 85, 134);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 .BtnNormalh :hover{
   background-color: #111;
+  color: white;
 }

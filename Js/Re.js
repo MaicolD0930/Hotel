@@ -7,6 +7,13 @@ function HideForm(){
     document.getElementById("TFORM").style.display="none";
 }
 
+//HREF BOTONES
+var Prueb2 = document.getElementById("");
+
+Prueb2.addEventListener("click", function() {
+    window.location.href = "/index.html";
+  });
+
 
 
 

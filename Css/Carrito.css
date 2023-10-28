@@ -1,3 +1,46 @@
+.CSlider2{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.asideCarrusel{
+    position: absolute;
+    top: 200px;
+    margin-top: 2000px;
+
+}
+.Slider2{
+    position: absolute;
+    width: 340px;
+    height: 260px;
+    margin-top: 0px;
+    margin: 50px auto 0;
+    margin-bottom: 50px;
+    top: -25px;
+    left: 25px;
+    overflow: hidden;
+}
+.Slider2 ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+.Slider2 li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.Slider2 img{
+    width: 340px ;
+    height: 180px;  
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+
+
+/* Carrito 1 */
 .CSlider{
     margin-left: 4%;
     width: 1180px;
@@ -48,10 +91,6 @@
     padding-right: 20%;
     font-size: 30px;
     margin-bottom: 35px;
-}
-/* Carrito */
-.Slider img{
-    width: 100%;
 }
 
 /* Animacion del Carrito */
