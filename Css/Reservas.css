@@ -20,8 +20,14 @@ body {
     padding: 0 50px;
     margin-top: 0px;
     padding-left: 65px;
-    margin-left: -14px;
+    margin-left: -22px;
 }
+.ck{
+    display: inline-block;
+    width: 130px;
+    padding-top: 10px;
+}
+
 .formularioIp p{
     background:rgb(190, 188, 188);
 }
@@ -70,6 +76,13 @@ li a {
   
 }
 
+#imgs1{
+    display: none;
+}
+#imgs2{
+    display: none;
+}
+
 #img1{
     display: none;
 }
@@ -86,16 +99,8 @@ li a {
 li a:hover {
   background-color: #111;
 }
+.cn{
 
-.ck{
-    display: inline-block;
-    width: 130px;
-    padding-top: 10px;
-}
-
-.CK{
-    width: 50px;
-    height: 20px;
 }
 
 header{

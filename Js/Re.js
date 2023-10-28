@@ -13,12 +13,13 @@ function HideForm(){
 function Reserva(){
     var Cd = document.getElementById("10");
     var V1 = document.getElementById("13");
+    var Sv = document.getElementById("Extra");
     var S1 = document.getElementById("11");
     var S2 = document.getElementById("12");
     var Btn = document.getElementById("Btnn");
     var Mensaje = document.getElementById("SUB");
     var MTotal = document.getElementById("TOTAL");
-    var Total=0, Opc = V1.value;
+    var Total=0, Opc = V1.value, Opc2 = Sv.value;
 
         //  1 Identificacion
     var Ide = document.getElementById("1").value;
@@ -65,7 +66,11 @@ function Reserva(){
             }
             else{
                 var EDAD = 2023 - Ano ;
-                if(parseInt(EDAD) < 18 ){
+                if(parseInt(EDAD) === 0 ){
+                    alert("!! Fecha de nacimiento incorrecta !!")
+                }
+                else if(parseInt(EDAD) > 1 & parseInt(EDAD) < 18 ){
+                    alert("!! Usted es menor de edad !!")
                     var MEdad = document.getElementById('eda');
                     MEdad.textContent ="Es menor de Edad: "+ EDAD + " Años";
                 }
@@ -75,12 +80,12 @@ function Reserva(){
                 }
                 
                     if(Eml.value.trim() === '')
-                        alert("!! El campo Email Esta Vacio !!");
+                        alert("!! El campo Email Esta Vacio  !!");
                     else if(!TIPO_EMAIL.test(Eml.value))
                         alert("El email es incorrecto");
                     else{
                         if(isNaN(parseInt(Tel)))
-                            alert("!! El campo Celular es obligatorio !!");
+                            alert("!! El campo Celular es obligatorio (**Recuerde solo se aceptan numeros**)!!");
                         else if(Tel.length > 10)
                             alert("!! El numero de celular no puede exceder 10 digitos !!")
                         else{
@@ -107,38 +112,26 @@ function Reserva(){
                                             var TiempoDia = 1000*60*60*24;
                                             var TDias = CDias / TiempoDia;
                                             Cd.textContent="Dias a Hospedarse: "+ TDias;
+                                            var PreTotal= Total;
+                                            Total=PreTotal*TDias;
                                         }else{ 
                                             alert("Usted debe de hospedarse minimo 1 dia")
                                         }
                                     }else{
                                         alert("!! La Fecha de Entrada y Salida son erroneas !!");
                                     }
-                                        Btn.addEventListener("click", function() {
-                                            if (S1.checked && S2.checked) {
-                                                Total=Total*TDias + 200000 ;
-                                                Mensaje.innerHTML = "Total: " + Total;
-                                                Total =Total + Total*0.19;
-                                                MTotal.innerHTML = Total;
-                                            }
-                                            else if(S1.checked ){
-                                                Total=Total*TDias + 150000;
-                                                Mensaje.innerHTML = "Total: " + Total;
-                                                Total =Total + Total*0.19;
-                                                MTotal.innerHTML = Total;
-                                            }
-                                            else if (S2.checked){
-                                                Total=Total*TDias + 50000;
-                                                Mensaje.innerHTML = "Total: " + Total;
-                                                Total =Total + Total*0.19;
-                                                MTotal.innerHTML = Total;
-                                            }
-                                            else{
-                                                Total=Total*TDias;
-                                                Mensaje.innerHTML = "Total: " + Total;
-                                                Total =Total + Total*0.19;
-                                                MTotal.innerHTML = Total;
-                                            }
-                                        });
+
+                                    if(Opc2 === "SV1"){
+                                        Total=PreTotal*TDias + 150000;
+                                    }else if(Opc2 === "SV2"){
+                                        Total=PreTotal*TDias + 50000;
+                                    }else if(Opc2 === "SV4"){
+                                        Total=PreTotal*TDias +200000;
+                                    }else if(Opc2 === "Sv3"){
+                                        Total=PreTotal*TDias;
+                                    }
+                                    Mensaje.innerHTML= Total;
+                                    MTotal.innerHTML = Total*0.19;
                                 }
                             }   
                         }
@@ -155,6 +148,33 @@ var imagen = document.getElementById("img1");
 var imagen2= document.getElementById("img2");
 var imagen3= document.getElementById("img3");
 var imagen4= document.getElementById("img4");
+var Ssv = document.getElementById("Extra");
+var imagenesS1= document.getElementById("imgs1");
+var imagenesS2= document.getElementById("imgs2");
+
+        //Funcion para Ocultar
+Ssv.addEventListener("change", function () {
+    if(Ssv.value === "SDefecto"){
+        imagenesS1.style.display="none";
+        imagenesS2.style.display="none";
+    }
+    else if(Ssv.value === "SVTodos"){
+        imagenesS1.style.display="inline-block";
+        imagenesS2.style.display="inline-block";
+    }
+    else if(Ssv.value === "SV4"){
+        imagenesS1.style.display="inline-block";
+        imagenesS2.style.display="inline-block";
+    }
+    else if(Ssv.value === "SV1"){
+        imagenesS1.style.display="inline-block";
+        imagenesS2.style.display="none";
+    }
+    else if(Ssv.value === "SV2"){
+        imagenesS1.style.display="none";
+        imagenesS2.style.display="inline-block";
+    }
+});
 
         //Funcion para Ocultar/Mostrar imagenes
 select.addEventListener("change", function () {
